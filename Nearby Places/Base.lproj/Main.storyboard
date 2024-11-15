@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d5D-R8-fa5">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Nearby_Places" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CB1-F7-R24">
+                                <rect key="frame" x="16" y="59" width="361" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="194" id="cNR-j2-i6u" customClass="VenueTableViewCell" customModule="Nearby_Places" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="194"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cNR-j2-i6u" id="yfn-Xk-4mh">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="194"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fi6-Y9-5Ao">
+                                                    <rect key="frame" x="129" y="27" width="212" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location.magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yvZ-c7-sFB">
+                                                    <rect key="frame" x="20" y="27.999999999999773" width="90" height="91"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEc-bd-HwB">
+                                                    <rect key="frame" x="129" y="73" width="212" height="110"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                                                        <bool key="isElement" value="NO"/>
+                                                    </accessibility>
+                                                    <attributedString key="attributedText">
+                                                        <fragment>
+                                                            <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </string>
+                                                            <attributes>
+                                                                <color key="NSColor" systemColor="labelColor"/>
+                                                                <font key="NSFont" size="14" name="ArialMT"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="street-address"/>
+                                                    <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TAz-OI-Rf1">
+                                                    <rect key="frame" x="20" y="127" width="90" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="hEc-bd-HwB" id="2wr-fR-hJF"/>
+                                            <outlet property="categoryImageView" destination="yvZ-c7-sFB" id="WuG-XM-rc3"/>
+                                            <outlet property="categoryLabel" destination="TAz-OI-Rf1" id="z0w-mN-pxc"/>
+                                            <outlet property="nameLabel" destination="fi6-Y9-5Ao" id="RZm-3w-2Up"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="e14-sw-o2M"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="M44-cQ-f8e"/>
+                                </connections>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dtT-im-dWp">
+                                <rect key="frame" x="52" y="270.33333333333326" width="288" height="308.66666666666674"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CB1-F7-R24" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4H9-rT-T5E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dtT-im-dWp" secondAttribute="bottom" constant="188" id="Knt-qw-s8G"/>
+                            <constraint firstItem="dtT-im-dWp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="211" id="YLW-I8-xOp"/>
+                            <constraint firstItem="CB1-F7-R24" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ytt-3A-mGZ"/>
+                            <constraint firstItem="dtT-im-dWp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="bG7-lC-eL2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CB1-F7-R24" secondAttribute="trailing" constant="16" id="h19-Xv-aug"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dtT-im-dWp" secondAttribute="trailing" constant="53" id="yBK-jL-sof"/>
+                            <constraint firstItem="CB1-F7-R24" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zHJ-pW-9Nv"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="homekit" catalog="system" id="S8T-BJ-Tb0">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="connectionImageView" destination="dtT-im-dWp" id="BxM-Ag-o9R"/>
+                        <outlet property="tableView" destination="CB1-F7-R24" id="ig4-Bi-2KM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-924.4274809160305" y="767.6056338028169"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="vSV-Gv-FpM">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="Zb9-Jd-pG2" customClass="ProfileViewController" customModule="Nearby_Places" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b13-AQ-NXS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="H1f-0W-MLw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="person.circle.fill" catalog="system" id="zfS-ME-8fP">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEm-LK-sb0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="768"/>
+        </scene>
+        <!--Terms & Conditions-->
+        <scene sceneID="ILv-aD-VMc">
+            <objects>
+                <viewController storyboardIdentifier="Terms_ViewController" id="z06-Dv-rpV" customClass="Terms_ViewController" customModule="Nearby_Places" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zRX-ou-F4V">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kf0-ri-0nq">
+                                <rect key="frame" x="16" y="59" width="361" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Terms and Conditions
+
+Welcome to our app! By downloading, accessing, or using our app, you agree to be bound by these terms. If you do not agree, we kindly ask you to uninstall the app (but trust us, you’ll miss out!).
+
+1. Introduction
+This app is a location-based service that fetches venue data based on your location. It’s magic powered by servers, caffeine, and occasional coding tantrums.
+
+2. Eligibility
+You must be at least 13 years old to use this app. If you’re under 18, make sure you’ve bribed your parent or guardian with enough snacks to approve your usage.
+
+3. Location Access
+We need your location to do cool things like fetch venues around you. By enabling location services, you agree that:
+
+Your device may occasionally shout “WHERE AM I?!” at our servers.
+We’re not responsible if your phone leads you into the middle of a lake instead of a café.
+4. Usage Rules
+You agree not to:
+
+Pretend to be a professional venue critic unless you’re really one.
+Use the app to stalk your ex (seriously, let it go).
+Blame us for poor weather at venues we suggest.
+5. Data Privacy
+We respect your privacy. While we do collect location data, it’s used solely to show you cool venues. No, we’re not secretly selling your data to a traveling circus.
+
+For detailed info, read our Privacy Policy (spoiler: it’s boring legal stuff).
+
+6. Limitation of Liability
+We strive to provide accurate data, but we can’t guarantee:
+
+That the venue isn’t closed, renamed, or turned into a taco stand overnight.
+That your phone battery won’t die when you’re halfway there.
+You agree that we are not liable for any:
+
+Wrong turns caused by your navigation app.
+Awkward encounters at venues you weren’t supposed to visit.
+7. Intellectual Property
+We own the app, including its code, design, and secret sauce. You can use it but can’t claim it’s yours. It’s like borrowing a friend’s sweater: enjoy it, but don’t put your name tag on it.
+
+8. Updates
+We may update these terms whenever we feel like it (or when lawyers make us). Keep checking back if you’re into reading legal updates for fun.
+
+9. Governing Law
+These terms are governed by the laws of [Insert Country/Region]. If disputes arise, let’s try to solve them like adults over coffee (or tea, if you insist).
+
+10. Contact Us
+If you have questions, complaints, or just want to say hi, reach out at: 📧 support@appname.com
+☎️ +123-456-7890
+
+By using the app, you acknowledge that you’ve read these terms and agree to abide by them. If not, uninstalling is just a long press away (but we’ll be sad to see you go).</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3sh-At-Pn4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kf0-ri-0nq" firstAttribute="top" secondItem="3sh-At-Pn4" secondAttribute="top" id="063-vI-dRN"/>
+                            <constraint firstItem="Kf0-ri-0nq" firstAttribute="leading" secondItem="3sh-At-Pn4" secondAttribute="leading" constant="16" id="O8R-yJ-f76"/>
+                            <constraint firstItem="3sh-At-Pn4" firstAttribute="trailing" secondItem="Kf0-ri-0nq" secondAttribute="trailing" constant="16" id="nGo-Y0-CWU"/>
+                            <constraint firstItem="Kf0-ri-0nq" firstAttribute="bottom" secondItem="3sh-At-Pn4" secondAttribute="bottom" id="wuE-kY-e4F"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Terms &amp; Conditions" selectedImage="questionmark.app.fill" catalog="system" id="cNp-Q2-wcA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U88-fS-p49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.763358778626" y="767.6056338028169"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xtz-dB-1Hc">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="d5D-R8-fa5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9dK-f1-bl8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Q8T-B9-pcv"/>
+                        <segue destination="Zb9-Jd-pG2" kind="relationship" relationship="viewControllers" id="UzW-yG-NZY"/>
+                        <segue destination="z06-Dv-rpV" kind="relationship" relationship="viewControllers" id="0zn-Na-lQh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sx2-Ry-DSX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35.877862595419849" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="location.magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="questionmark.app.fill" catalog="system" width="128" height="114"/>
+        <image name="wifi.slash" catalog="system" width="128" height="101"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
